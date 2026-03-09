@@ -7,8 +7,6 @@ import discord
 from discord.ext import commands
 from gpt4all import GPT4All
 import glob
-import torch
-from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
 import functools
 import typing
 import asyncio
