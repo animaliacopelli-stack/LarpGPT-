@@ -55,6 +55,8 @@ def to_thread(func: typing.Callable) -> typing.Coroutine:
     async def wrapper(*args, **kwargs):
         return await asyncio.to_thread(func, *args, **kwargs)
     return wrapper
+
+
 elif args[0] == "txt2image":
     await ctx.send("Image generation is disabled on Railway (no GPU available)")
 
