@@ -56,10 +56,6 @@ def to_thread(func: typing.Callable) -> typing.Coroutine:
         return await asyncio.to_thread(func, *args, **kwargs)
     return wrapper
 
-@to_thread
-def image_generator(img_prompt):
-    image = pipe(img_prompt).images[0]
-    return image
 
 @bot.event
 async def on_message(message):
